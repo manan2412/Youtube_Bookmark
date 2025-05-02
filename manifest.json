@@ -1,0 +1,37 @@
+{
+  "name": "Bookmark and AD Skipper Extensions",
+  "description": "Bookmark and AD Skipper Extensions",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Bookmark and AD Skipper Extensions",
+    "default_popup": "./popup.html",
+    "default_icon": {
+      "16": "./images/icon-16.png",
+      "32": "./images/icon-32.png",
+      "48": "./images/icon-48.png",
+      "128": "./images/icon-128.png"
+    }
+  },
+  "content_scripts": {
+    "matches": "",
+    "js": "content_scripts.js"
+  },
+  "background": {
+    "service-worker": "background.js"
+  },
+  "web-accessible-resources": [
+    {
+      "resources": [
+        "./images/add-bookmark.png",
+        "./images/check.png",
+        "./images/delete-bookmark.png",
+        "./images/play-button.png"
+        
+      ],
+      "matches": [
+        "https://*.youtube.com/*"
+      ]
+    }
+  ]
+}
